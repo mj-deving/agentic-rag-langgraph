@@ -1,0 +1,29 @@
+[project]
+name = "agentic-rag-langgraph"
+version = "0.1.0"
+description = "Agentic RAG over the EU AI Act on LangGraph, fully local via Ollama, graded by the same deterministic gate as its Mastra twin."
+license = "Apache-2.0"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain-core>=1.7.6",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.2.20",
+    "numpy>=2.5.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[project.scripts]
+ingest = "agentic_rag_langgraph.rag:ingest_main"
+ask = "agentic_rag_langgraph.rag:ask_main"
+eval = "agentic_rag_langgraph.eval:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,135 @@
+{
+  "loc": {
+    "rule": "code lines without blanks, comments or docstrings",
+    "mastra": {
+      "commit": "d19dfcd44a32ae8d3294faa95b57a0f24b41534c",
+      "files": {
+        "src/lib/grading.ts": 36,
+        "src/lib/golden.ts": 21,
+        "src/mastra/agents/instructions.ts": 22,
+        "src/lib/config.ts": 21,
+        "src/lib/models.ts": 18,
+        "src/mastra/agents/regulation-agent.ts": 17,
+        "src/mastra/tools/search-regulation.ts": 36,
+        "src/mastra/lib/vector-store.ts": 6,
+        "src/mastra/index.ts": 30,
+        "src/mastra/workflows/ingest-corpus.ts": 50,
+        "scripts/ingest.ts": 8,
+        "scripts/ask.ts": 8,
+        "src/mastra/scorers/index.ts": 53,
+        "scripts/eval.ts": 159
+      },
+      "roles": {
+        "grading": 36,
+        "golden loader": 21,
+        "prompt": 22,
+        "config": 21,
+        "agent + tool + store": 107,
+        "ingest + ask": 66,
+        "eval runner + scorers": 212
+      },
+      "total": 485
+    },
+    "langgraph": {
+      "files": {
+        "src/agentic_rag_langgraph/grading.py": 70,
+        "src/agentic_rag_langgraph/golden.py": 33,
+        "src/agentic_rag_langgraph/instructions.py": 24,
+        "src/agentic_rag_langgraph/config.py": 11,
+        "src/agentic_rag_langgraph/rag.py": 110,
+        "src/agentic_rag_langgraph/eval.py": 124
+      },
+      "roles": {
+        "grading": 70,
+        "golden loader": 33,
+        "prompt": 24,
+        "config": 11,
+        "agent + tool + store": 110,
+        "eval runner + scorers": 124
+      },
+      "total": 372
+    }
+  },
+  "runs": {
+    "2026-11-09-qwen3-8b-v2-v1": {
+      "mastra": {
+        "verdict": "failed",
+        "citationValidity": 0.95,
+        "refusalCorrectness": 0.875,
+        "outOfCorpusRefused": "4/7",
+        "citationRecall": 0.9193548387096774,
+        "factCoverage": 0.8709677419354839,
+        "retrievalRecallAtK": 0.9393939393939394
+      },
+      "langgraph": {
+        "verdict": "failed",
+        "citationValidity": 0.95,
+        "refusalCorrectness": 0.85,
+        "outOfCorpusRefused": "4/7",
+        "citationRecall": 0.9166666666666666,
+        "factCoverage": 0.9,
+        "retrievalRecallAtK": 0.9393939393939394,
+        "answeredWithoutSearch": [
+          "a113-application",
+          "a5-social-scoring",
+          "a5-realtime-biometric",
+          "a26-biometric-48h",
+          "ooc-gdpr-fine",
+          "ooc-gpai-flops",
+          "ooc-us-law",
+          "ooc-sandbox"
+        ]
+      },
+      "perCase": {
+        "cases": 40,
+        "sameAnswerOrRefuseDecision": 39,
+        "differentDecision": [
+          "a5-social-scoring"
+        ],
+        "gateFailures": {
+          "mastra": [
+            "a113-application",
+            "ooc-definition-ai-system"
+          ],
+          "langgraph": [
+            "a113-application",
+            "ooc-definition-ai-system"
+          ]
+        }
+      }
+    },
+    "2026-11-09-qwen3-8b-v2-heldout": {
+      "mastra": {
+        "verdict": "scored",
+        "citationValidity": 1,
+        "refusalCorrectness": 0.625,
+        "outOfCorpusRefused": "2/4",
+        "citationRecall": 1,
+        "factCoverage": 1,
+        "retrievalRecallAtK": 1
+      },
+      "langgraph": {
+        "verdict": "scored",
+        "citationValidity": 1.0,
+        "refusalCorrectness": 0.625,
+        "outOfCorpusRefused": "2/4",
+        "citationRecall": 1.0,
+        "factCoverage": 1.0,
+        "retrievalRecallAtK": 1.0,
+        "answeredWithoutSearch": [
+          "h-a99-midcap",
+          "h-ooc-copyright"
+        ]
+      },
+      "perCase": {
+        "cases": 8,
+        "sameAnswerOrRefuseDecision": 8,
+        "differentDecision": [],
+        "gateFailures": {
+          "mastra": [],
+          "langgraph": []
+        }
+      }
+    }
+  }
+}

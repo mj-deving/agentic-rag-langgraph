@@ -1,0 +1,24 @@
+{
+  "source": "agentic-rag-mastra (sibling repo)",
+  "sourceCommit": "d19dfcd44a32ae8d3294faa95b57a0f24b41534c",
+  "note": "Copied byte for byte; tests/test_corpus.py fails if any file drifts from these hashes.",
+  "sha256": {
+    "corpus/chunks.json": "47c55126a879a8e8f9c0d0ea6c11c48790a49270717c2b05d232bbdd00ec1245",
+    "corpus/sources/art-113.provenance.json": "5fc5c707702992fb71a4cb3cb718cc4f77390d37239903f0e4b47735d707cbfc",
+    "corpus/sources/art-113.source.txt": "c30a0fc5cf2e35f6c8e04d9d6660a9aab8605363fa3b567c514d751cac234d3b",
+    "corpus/sources/art-26.provenance.json": "4fce13e632ab661a9b7eec34e2439dd285349af2c6c7dcac736d6df478abeadb",
+    "corpus/sources/art-26.source.txt": "4909ca40650b7d7bb80d3bfd4939fee9812205eb78dde594934eacb90185b879",
+    "corpus/sources/art-4.provenance.json": "59203b2345af189df3da206c0cf8266bf2aa3b4bc6a1706d392a32418ca9be8d",
+    "corpus/sources/art-4.source.txt": "3e10d9c089bbe619681567c84efcccf2a6af21208eda04606949bb783d8d068f",
+    "corpus/sources/art-5.provenance.json": "cdc9c3bab9edf1b8ac4e7547d9168b0312a7836d15be931ec710adf86362d040",
+    "corpus/sources/art-5.source.txt": "ecb86401dec7035cd2c9d4665f4da4d82bc8c168aed6e550854523a20828ebf3",
+    "corpus/sources/art-50.provenance.json": "b30659dea4fb2bdbbed25c054e5a304d1d2af90dc62ebf31696314be8d79b868",
+    "corpus/sources/art-50.source.txt": "21c49c6bbb0ad6ed71397a8c6e4228e8b939e36044e7be8d589dd0898b30d719",
+    "corpus/sources/art-6.provenance.json": "58b03c8c19d11589dfd86e83a387e984184c51d6949af938f2936d7fa8afd020",
+    "corpus/sources/art-6.source.txt": "47fecaa1dedf6a0c30548172d63556842c5b1f370163424f2a71e13b7b1264ef",
+    "corpus/sources/art-99.provenance.json": "fffed389c29400716f181d0413c76ffae6487ca02305028cc7d67353a903d23e",
+    "corpus/sources/art-99.source.txt": "2338c5cc83226265f7d4a88c77f12cb4e5b6f1c3484770f3944db4134e1a9f0a",
+    "golden/heldout.jsonl": "ac37191a9ceb1d139d26d6939ebb471defea7da4d4b7dff01f7f0cb16f3079f6",
+    "golden/v1.jsonl": "1950df15a20572c62d564365c9bd2a4570a4416771abf618bb7936d95069e575"
+  }
+}
