@@ -156,3 +156,8 @@ channel made the "retrieved in the same run" rule simpler to implement than on M
 The corpus is a mirror's rendering of the consolidated text of Articles 4, 5, 6, 26, 50, 99 and 113,
 not the Official Journal; each provenance file names the exact URL and retrieval date. Answers are
 about this snapshot. This is not legal advice.
+
+## Intent
+
+[`ISA.md`](ISA.md) (German) is the spec this repo was built against: what "done" meant, the probe
+that would falsify each criterion, the evidence recorded for it, and the limits left open on purpose.
