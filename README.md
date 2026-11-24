@@ -99,8 +99,12 @@ because it changes the agent and would need a fresh held-out set to judge.
 ## Mastra vs. LangGraph: same contract, what each framework gives
 
 Mastra numbers are read from that repo's `results/` at commit `d19dfcd`, before its citation guard
-was added; `uv run python scripts/compare.py ../agentic-rag-mastra d19dfcd` writes
-[`results/comparison.json`](results/comparison.json).
+was added; `uv run python scripts/compare.py ../agentic-rag-mastra d19dfcd` wrote
+[`results/comparison.json`](results/comparison.json). That commit predates the public history of
+[agentic-rag-mastra](https://github.com/mj-deving/agentic-rag-mastra). To reproduce against the
+public repo, run `uv run python scripts/compare.py ../agentic-rag-mastra 4c3cbca`: the run-by-run
+comparison comes out identical, while the Mastra code count reads 509 instead of 485, because that
+commit already carries the `GUARD` switch (config, agent wiring, eval hooks).
 
 | | Mastra | LangGraph |
 |---|---|---|
